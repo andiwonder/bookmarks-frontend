@@ -1,0 +1,47 @@
+<div class="bookmarks-container viewport">  
+  <div class="bookmark__detail" *uiScroll="let bookmark of datasource" (click)="onSelect(bookmark)" [class.selected]="bookmark === selectedBookmark">    
+    <mat-card class="bookmark__detail__card">
+      <div class="bookmark__detail__text">
+        <h1>{{bookmark.id}}</h1>
+        <p>{{bookmark.title}} -  {{bookmark.description}}</p>
+      </div>
+      <div ng-if="bookmark.tags.length > 0">
+        <mat-chip-list>
+          <mat-chip *ngFor="let tag of bookmark.tags" class="bookmark__detail__chip">{{tag.type}}</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div ng-if="bookmark.url.length > 5">
+        <button class="link__button" mat-button color="primary">
+          <a href="{{bookmark.url}}" target="_blank">
+            Open Link
+          </a>
+        </button>
+        <button class="edit__button" mat-button color="primary" routerLink="/detail/{{bookmark.id}}">          
+            Edit
+        </button>
+      </div>
+    </mat-card>              
+  </div>
+</div>
+
+<mat-card class="bookmark__edit__card">
+  <h2>Add new Bookmark</h2>  
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput name="title" placeholder="title" #bookmarkTitle>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput name="description" placeholder="description" #bookmarkDescription></textarea>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput name="url" placeholder="url" #bookmarkUrl></textarea>
+    </mat-form-field>
+  
+  </form>
+  <!-- Is this correctly passed the values needed -->
+  <button mat-raised-button color="primary" (click)="add(bookmarkTitle.value, bookmarkDescription.value, bookmarkUrl.value)">save</button>
+  <button mat-raised-button color="warn" (click)="add()">Cancel</button>
+</mat-card>

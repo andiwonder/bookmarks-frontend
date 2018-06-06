@@ -1,0 +1,29 @@
+<mat-card class="bookmark__edit__card">
+  <h2>{{ bookmark.title }} Details</h2>
+  <!-- <div><span>id: </span>{{bookmark.id}}</div> -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="bookmark.title" name="title" placeholder="title">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput [(ngModel)]="bookmark.description" name="description" placeholder="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="demo-chip-list" ng-if="bookmark.tags.length > 0">
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let tag of bookmark.tags" [removable]="removable">
+          {{tag.type}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="New Tag..."
+               [matChipInputFor]="chipList"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               [matChipInputAddOnBlur]="addOnBlur"
+               (matChipInputTokenEnd)="add($event)" />
+      </mat-chip-list>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="warn" (click)="goBack()">go back</button>
+  <button mat-raised-button color="primary" (click)="save()">save</button>
+</mat-card>

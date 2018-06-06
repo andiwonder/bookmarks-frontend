@@ -1,0 +1,16 @@
+.dashboard__container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bookmark-col {
+  width: 30%;
+}
+
+.dashboard__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}

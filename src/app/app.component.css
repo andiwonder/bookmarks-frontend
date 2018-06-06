@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu_button {
+  margin-left: 16px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.menu_toolbar {
+  background: #c54e50;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.menu_logo {
+  background: #1e1459;
+  padding: 1em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-right: 16px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,99 @@
+.bookmarks-container {
+  width: 56%;
+  display: inline-block;
+  /*margin: 0 0 0 44%;*/
+  /*background: hsla(180, 33%, 82%, 0.882);*/
+}
+
+img {
+  max-width: 100%;
+}
+
+.bookmark__detail__text {
+  /*display: inline-block;
+  width: 40%;
+  vertical-align: top;*/
+}
+
+.bookmark__detail__text p {
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/*.bookmark__detail__image {
+  display: inline-block;
+  width: 50%;
+}*/
+
+.bookmark__detail {
+  margin-bottom: 2em;
+  width: 90%;
+  padding: 12px 18px;
+}
+
+.bookmark__edit__card {
+  width: 36%;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  /*min-height: 60px;*/
+}
+
+/*.selected {
+  background-color: #cfd8dc !important;
+  color: red;
+}*/
+/*
+form {
+  display: inline-block;
+}
+*/
+
+.viewport {
+  height: 600px;
+  overflow-y: auto;
+  overflow-anchor: none;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.bookmark__detail__chip {
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+button {
+  margin-right: 16px;
+}
+
+.link__button a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.link__button,
+.edit__button {
+  border: 1px solid;
+  margin-top: 16px;
+}

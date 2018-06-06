@@ -1,0 +1,11 @@
+<div class="dashboard__container">
+  <h1>Dashboard</h1>
+  <div class="dashboard__list">
+    <a *ngFor="let bookmark of bookmarks" class="bookmark-col" routerLink="/detail/{{bookmark.id}}">
+      <div class="module bookmark">
+        <h4>{{bookmark.title}}</h4>
+        <p>{{bookmark.description}}</p>
+      </div>
+    </a>
+  </div>  
+</div>
